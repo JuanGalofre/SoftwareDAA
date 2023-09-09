@@ -1,0 +1,21 @@
+Object oriented design
+  REQUERIMENTS
+    The requeriments can be obtained using users story. 
+    Classic construction is 
+      As an online shopper, I want to add an item to my shopping cart,so that I can purchase it.
+    General construction is 
+      As a ____________, I want to _______________ so that ________________________________________
+  MODELING 
+    We need an idea, a plan, to make a successfull software. There are two types of designs.
+      Conceptual design
+        A mockup is where I:
+          ->Create elements
+          ->Asign responsabilities
+          ->Make conections
+      Technical design
+        Digestion or exploration in the elements created in the mockup
+        In this design I:
+          Divide those elements into components:
+            Components are a collection of functions, classes, variables, etc.
+
+
