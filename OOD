@@ -17,5 +17,59 @@ Object oriented design
         In this design I:
           Divide those elements into components:
             Components are a collection of functions, classes, variables, etc.
+DECOMPOSITION
+    Whole thing into diff parts
+    ASSOCIATION weak
+      Some relationship. Maybe the will interact some time. But not always
+      Straight line in a UML diagram is an association
+        0..* Cero or more objects that are associated
+        Association is not dependent. If one item is destroyed, the other one can continue
+      Public class Wine{ Public void pair (Food food){  }} <- That is a Java association.
+    AGGREGATION weak
+      "Has-a" relationship. Where parts belong to the wholes. Like airline and crew
+      They do become a part of the airline, but airline can still exist without crew.
+      Empty diamond signals the relationship of aggregation
+    COMPOSITION strong
+      "Has-a" relationship, but it is strong. If one cease to exist, you cannot have the other one
+      Black filled diamond signals the relationship of composition
+INHERITANCE
+  This is connected with an arrow. Superclass is located on the tip of the arrow and subclasses are located on the
+  tail of the arrow
+UML
+  # means that is protected, so it can only be accessed byt the class, all subclasses and All classes within the same package
+  A subclass will have attributes and behaviours of the superclass
+  Public Abstract -> This indicates that we cannot create an Animal object
+  In order to get the superclass into the subclass, in java we use Public class Dog extends Animal 
+  There are implicit and explicit constructors.
+    Implicit constructors mean that we do not put any code into it. It will be initiated as 0 or null
+    Explicit constructors mean that we do oput code. Like
+      public Animal (int Legs){ this.numberOfLegs = legs;}
+    When we have a subclass, and the superclass has a constructor, we need to do 
+      Public class Dog extends Animal{ public dog (int Legs){ super(legs);}}
+    Where super talks about the explicit constructor in the superclass
+    Also super is about overriding
+    That happens also when we write the same name of a method of a superclass, but with different code
+  Types of inheritance
+    A subclass can only have 1 superclass. But a subclass can be a superclass
+  SUBTYPING
+    We have an Animal type, like the one where we create like Person = new Person(). but with Animal type. So a dog will
+    have type Animal, and subtype dog
+  INTERFACE
+    Is not a class -> Describe behaviors. Only method signatures
+      public interface IAnimal{
+        public void move();
+        public void speak();
+      }
+    When we are going to implement the interface, we use the word implements. When we do that, we need to write all the 
+    methods that are in the interface
+    They are drawn in UML as <<interface>>. In UML, a dashed lined represent the interface implementation. Tip: Interface
+    tail will be class
+  POLYMORPHISM
+    Animals do speak, but cat goes meaow and dog goes bark.
+    So even if we ahve the same Interface, the aplcation of those methods is going to be different. That's polymorphism
+  MULTIPLE INHERITANCE
+    Java does not allow it. Because we can have Data Ambiguity. Since both superclasses can have the same name
+    But this does not happen with Interfaces. As Interfaces are just contracts, and the implementation will be on the
+    class, not on the interface.
 
-
+    
